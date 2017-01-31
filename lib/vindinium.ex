@@ -1,6 +1,6 @@
 defmodule Vindinium do
 
-  def start(secret, mode, turns, bot \\ Vindinium.Bots.Random) do
+  def start(secret, mode, turns, bot \\ Vindinium.Bots.First) do
     Vindinium.Client.start
     state = start_game(secret, mode, turns)
     IO.puts "Watch game at: #{state["viewUrl"]}"
